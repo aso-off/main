@@ -1,56 +1,36 @@
+# Структура проекта для ЦОДД
 
-# Проект для ЦОДД
+В этом репозитории реализован алгоритм и веб-интерфейс.
 
-  
+# Backend
 
-В этом репозитории реализован алгоритм + веб-интерфейс для решения кейса.
+- **fain.py** - Файл, для изменения названий файлов данных, написанных на кирилеце, чтобы они переводились транслитом.
+- **main.py** - Основной код
+- **new.py** - Базовый визуализатор
+- **test.py** - Первоначальная версия, которая генерирует графы.
 
-  
+## Frontend
 
-Для включентя проекта, you need:
+### Public
+- **public/**
+  - **favicon.ico** - Иконка для отображения на вкладке браузера.
+  - **index.html** - Основная HTML-страница приложения.
 
-* Установить данный репозиторий
-* Install the necessary libraries ( list is in the file requirements.txt )
+### Src
+- **src/** - Исходный код фронтенда.
+  - **assets/** - Папка для статических ресурсов, таких как изображения и стили.
+    - **img/** - Папка для хранения изображений.
+  - **router/** - Маршрутизация приложения Vue.js.
+  - **store/** - Vuex хранилище для управления состоянием приложения.
+  - **views/** - Основные представления (страницы) приложения.
+  - **App.vue** - Главный компонент Vue, содержащий основную разметку.
+  - **main.js** - Точка входа для инициализации Vue приложения.
 
-* change the api key instead of the asterics`openal.api_key = "***"` insert your key from Open AI in the file `utils.py`
+### Конфигурационные файлы
+- **babel.config.js** - Конфигурация Babel для трансформации кода JavaScript.
+- **jsconfig.json** - Конфигурационный файл для настройки путей и автозавершения в редакторах.
+- **package-lock.json** - Файл блокировки зависимостей, фиксирующий версии npm-пакетов.
+- **package.json** - Конфигурационный файл npm, содержащий зависимости и скрипты проекта.
+- **vue.config.js** - Конфигурационный файл Vue.js.
 
-* Run the file `app.py`
-
-  
-
-Short description of the project files
-
-------------
-├── .idea <- folder for PyCharm
-
-├── .venv <- folder virtual environment
-
-├── regulations <- sample regulations folder
-
-├── uploads <- folder to store incoming files for processing
-
-├── `app.py`<- main file
-
-│ │`function`
-
-│ ├── upload_file <- Asynchronous handler that processes incoming files
-
-│ └── check_text <- Asynchronous handler that processes incoming text
-
-├── `requirements.txt` <- list of required libraries
-
-└── `utils.py` <- basic functions file
-
----│ `function`
-
----├── extract_text_from_docx<-Function for extracting text from .docx files
-
----├── extract_text_from_pdf<-Function for extracting text from .pdf files
-
----├── extract_text_from_xlsx<-Function for extracting text from .xlsx files
-
----└── check_compliance_with_regulations<-Function for checking compliance with regulations using GPT-4o
-
-
-
---------
+- **readme.md** - Документация проекта.
